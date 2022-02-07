@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+
+<div class="container">
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Nombre Persona</label>
+            <input type="text" class="form-control" placeholder="Nombre de la persona" formControlName="fullname">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlImput1">birth</label>
+            <input type="text" class="form-control" placeholder="Birth" formControlName="birth">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Madre</label>
+            <input type="text" class="form-control" placeholder="mother" formControlName="mother">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Padre</label>
+            <input type="text" class="form-control" placeholder="father" formControlName="father">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Hijo</label>
+            <input type="text" class="form-control" placeholder="child" formControlName="child">
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminarPerson()"> Eliminar</button>
+        <button type="button" class="btn btn-dark" (click)="salir()"> Salir</button>
+        <div class="btn-group dropup">
+          
+            <button type="button" class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Andres</span>
+            </button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>
